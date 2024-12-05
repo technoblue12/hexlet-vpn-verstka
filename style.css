@@ -3,10 +3,12 @@ body {
   width: 1440px;
   margin: 0;
   font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
 }
 
 main {
   background: linear-gradient(#f8f8f8 0%, transparent 100%);
+  overflow-x: hidden;
 }
 
 footer {
@@ -323,6 +325,7 @@ footer {
   align-items: center;
   text-align: center;
   margin-top: 150px;
+  margin-bottom: 50px;
 }
 .sub-info .main-text {
   font-size: 35px;
@@ -341,12 +344,7 @@ footer {
   font-weight: 500;
 }
 
-.review-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.review-block .main-text {
+.review-main-text {
   font-size: 35px;
   font-weight: 500;
   line-height: 50px;
@@ -354,7 +352,8 @@ footer {
   width: 447px;
   margin-bottom: 20px;
 }
-.review-block .sub-text {
+
+.review-sub-text {
   font-size: 16px;
   line-height: 30px;
   text-align: center;
@@ -362,9 +361,16 @@ footer {
   margin-bottom: 60px;
 }
 
+.review-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .reviews {
   display: flex;
   flex-wrap: nowrap;
+  width: 1360px;
   margin-left: 150px;
   margin-bottom: 60px;
 }
@@ -374,19 +380,46 @@ footer {
   flex-direction: column;
   border: 2px #ddd solid;
   border-radius: 10px;
-  width: 400px;
-  height: 230px;
+  width: 430px;
+  height: 170px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   margin-right: 50px;
 }
 .review-card .review-card-top {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 30px;
+  margin-bottom: 10px;
 }
 .review-card .review-card-top div {
   display: flex;
-  flex-direction: column;
 }
-.review-card span {
-  width: 340px;
+.review-card .review-card-top div div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.review-card .review-card-top img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+.review-card .review-card-top .main-text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 15px;
+}
+.review-card .review-card-top .sub-text {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.review-message {
+  font-size: 16px;
+  line-height: 30px;
+  margin: 0 30px;
 }
 
 .star::after {
