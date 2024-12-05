@@ -1,5 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+$button-red: #F53855;
+$text-black: #0B132A;;
+$text-gray: #4F5665;
+
+@mixin main-text {
+    color: $text-black;
+}
+
+@mixin sub-text {
+    color: $text-gray;
+}
+
+@mixin margin-right-12 {
+    margin-right: 12px;
+}
+
+@mixin font-20 {
+    font-size: 20px;
+}
+
+@mixin font-16 {
+    font-size: 16px;
+}
+
+@mixin font-14 {
+    font-size: 14px;
+}
+
+body {
+    width: 1440px;
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+}
+
 .menu {
-    margin-left: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 150px;
+
+}
+
+.logo-text {
+    @include font-20;
+    font-weight: bold;
+}
+
+.logo-text-smaller {
+    @include font-20;
+    font-weight: 500;
 }
 
 .info-bar {
@@ -11,7 +61,65 @@
 }
 
 .text-buttons {
+    width: 471px;
+    display: flex;
+    justify-content: space-between;
 
+    & button {
+        @include font-16;
+        @include sub-text;
+        font-weight: 500;
+
+        background-color: transparent;
+        border: none;
+
+        cursor: pointer;
+
+        &:hover {
+            @include main-text;
+        }
+    }
+}
+
+.sign-in {
+    @include font-16;
+    @include main-text;
+    transition: 500ms;
+    font-weight: 600;
+
+    background-color: transparent;
+    border: none;
+
+    margin-right: 20px;
+
+    cursor: pointer;
+
+    &:hover {
+        @include sub-text;
+        transition: 500ms;
+    }
+}
+
+.sign-up {
+    @include font-16;
+    font-weight: 600;
+
+    color: $button-red;
+    transition: 500ms;
+
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 50px;
+
+    width: 150px;
+    height: 45px;
+
+    cursor: pointer;
+
+    &:hover {
+        color: $text-black;
+        transition: 500ms;
+    }
 }
 
 .card-block-side {
@@ -22,6 +130,28 @@
 
 }
 
-.check-mark {
+.logo {
+    & span {
+        display: flex;
+        align-items: center;
+    }
     
+    & ::before {
+        margin-right: 10px;
+        content: url("./icons/logo.svg");
+    }
+}
+
+.plan-card {
+    .check-mark::before {
+        @include margin-right-12;
+        content: url("./icons/checkmark.svg");
+    }
+}
+
+.features {
+    .check-mark-big::before {
+        @include margin-right-12;
+        content: url("./icons/bigcheckmark.svg");
+    }
 }

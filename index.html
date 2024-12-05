@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.scss">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
         <!-- Верхняя панель с кнопками -->
         <div class="menu">
-            <span class="logo">LaslesVPN</span>
+            <div class="logo logo-text-smaller"><span>LaslesVPN</span></div>
 
-            <div class="text-buttons"></div>
+            <div class="text-buttons">
                 <button>About</button>  
                 <button>Features</button>
                 <button>Pricing</button>
@@ -20,8 +20,10 @@
                 <button>Help</button>
             </div>
 
-            <button>Sign In</button>
-            <button>Sign Up</button>
+            <div>
+                <button class="sign-in">Sign In</button>
+                <button class="sign-up">Sign Up</button>
+            </div>
         </div>
 
         <!-- Краткая информация с кнопкой -->

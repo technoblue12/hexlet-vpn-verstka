@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+body {
+  width: 1440px;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 150px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo-text-smaller {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.text-buttons {
+  width: 471px;
+  display: flex;
+  justify-content: space-between;
+}
+.text-buttons button {
+  font-size: 16px;
+  color: #4F5665;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.text-buttons button:hover {
+  color: #0B132A;
+}
+
+.sign-in {
+  font-size: 16px;
+  color: #0B132A;
+  transition: 500ms;
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.sign-in:hover {
+  color: #4F5665;
+  transition: 500ms;
+}
+
+.sign-up {
+  font-size: 16px;
+  font-weight: 600;
+  color: #F53855;
+  transition: 500ms;
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 50px;
+  width: 150px;
+  height: 45px;
+  cursor: pointer;
+}
+.sign-up:hover {
+  color: #0B132A;
+  transition: 500ms;
+}
+
+.logo span {
+  display: flex;
+  align-items: center;
+}
+.logo ::before {
+  margin-right: 10px;
+  content: url("./icons/logo.svg");
+}
+
+.plan-card .check-mark::before {
+  margin-right: 12px;
+  content: url("./icons/checkmark.svg");
+}
+
+.features .check-mark-big::before {
+  margin-right: 12px;
+  content: url("./icons/bigcheckmark.svg");
+}/*# sourceMappingURL=style.css.map */
