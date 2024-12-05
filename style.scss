@@ -482,6 +482,44 @@ footer {
         text-align: center;
 
         width: 555px;
+
+        margin-bottom: 60px;
+    }
+}
+
+.reviews {
+    display: flex;
+    flex-wrap: nowrap;
+
+    //width: 1300px;
+
+    margin-left: 150px;
+    margin-bottom: 60px;
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+
+    border: 2px #ddd solid;
+    border-radius: 10px;
+
+    width: 400px;
+    height: 230px;
+    
+    margin-right: 50px;
+
+    & .review-card-top {
+        display: flex;
+
+        & div {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    & span {
+        width: 340px;
     }
 }
 

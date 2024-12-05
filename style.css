@@ -359,6 +359,34 @@ footer {
   line-height: 30px;
   text-align: center;
   width: 555px;
+  margin-bottom: 60px;
+}
+
+.reviews {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 150px;
+  margin-bottom: 60px;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  border: 2px #ddd solid;
+  border-radius: 10px;
+  width: 400px;
+  height: 230px;
+  margin-right: 50px;
+}
+.review-card .review-card-top {
+  display: flex;
+}
+.review-card .review-card-top div {
+  display: flex;
+  flex-direction: column;
+}
+.review-card span {
+  width: 340px;
 }
 
 .star::after {
