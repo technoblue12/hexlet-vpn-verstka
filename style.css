@@ -30,12 +30,8 @@ footer {
 
 .logo-text {
   font-size: 20px;
-  font-weight: bold;
-}
-
-.logo-text-smaller {
-  font-size: 20px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .text-buttons {
@@ -47,27 +43,29 @@ footer {
   font-size: 16px;
   color: #4F5665;
   font-weight: 500;
+  transition: 250ms;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 .text-buttons button:hover {
-  color: #0B132A;
+  transition: 250ms;
+  color: #F53838;
 }
 
 .sign-in {
   font-size: 16px;
   color: #0B132A;
-  transition: 500ms;
   font-weight: 600;
+  transition: 500ms;
   background-color: transparent;
   border: none;
   margin-right: 20px;
   cursor: pointer;
 }
 .sign-in:hover {
-  color: #4F5665;
   transition: 500ms;
+  color: #F53838;
 }
 
 .sign-up {
@@ -83,7 +81,9 @@ footer {
   cursor: pointer;
 }
 .sign-up:hover {
-  color: #0B132A;
+  color: #fff;
+  background-color: #F53838;
+  box-shadow: 0px 25px 30px 0px rgba(245, 56, 56, 0.2);
   transition: 500ms;
 }
 
@@ -116,14 +116,21 @@ footer {
 .start-info div button {
   font-size: 16px;
   font-weight: 700;
+  transition: 500ms;
   background-color: #F53838;
   color: #fff;
-  border: none;
+  border: 2px transparent solid;
   border-radius: 10px;
   width: 250px;
   height: 60px;
   box-shadow: 0px 25px 30px 0px rgba(245, 56, 56, 0.2);
   cursor: pointer;
+}
+.start-info div button:hover {
+  color: #F53838;
+  background-color: transparent;
+  border: 2px #F53838 solid;
+  transition: 500ms;
 }
 
 .info-bar {
@@ -332,6 +339,31 @@ footer {
 }
 .sub-info .sub-text .sub-text {
   font-weight: 500;
+}
+
+.review-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.review-block .main-text {
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 50px;
+  text-align: center;
+  width: 447px;
+  margin-bottom: 20px;
+}
+.review-block .sub-text {
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  width: 555px;
+}
+
+.star::after {
+  content: url(./icons/star.svg);
+  margin-left: 10px;
 }
 
 .logo span {
