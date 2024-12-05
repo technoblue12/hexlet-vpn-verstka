@@ -310,6 +310,30 @@ footer {
   border: 2px #F53838 solid;
 }
 
+.sub-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 150px;
+}
+.sub-info .main-text {
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 50px;
+  width: 383px;
+  margin-bottom: 20px;
+}
+.sub-info .sub-text {
+  font-size: 16px;
+  line-height: 30px;
+  width: 555px;
+  margin-bottom: 155px;
+}
+.sub-info .sub-text .sub-text {
+  font-weight: 500;
+}
+
 .logo span {
   display: flex;
   align-items: center;
