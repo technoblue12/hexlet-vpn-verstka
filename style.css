@@ -1,17 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 body {
   width: 1440px;
+  height: 5190px;
   margin: 0;
   font-family: "Rubik", sans-serif;
   overflow-x: hidden;
 }
 
 main {
-  background: linear-gradient(#f8f8f8 0%, transparent 100%);
+  background: linear-gradient(#f8f8f8 0%, #fff 100%);
   overflow-x: hidden;
 }
 
 footer {
+  height: 564px;
   background-color: #f8f8f8;
 }
 
@@ -450,7 +452,6 @@ footer {
   justify-content: space-between;
   margin-left: 150px;
   margin-right: 150px;
-  margin-bottom: 180px;
 }
 .review-buttons button {
   border: 2px #F53838 solid;
@@ -476,6 +477,67 @@ footer {
   background-image: url(./icons/arrow-right.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.extra-space {
+  background: linear-gradient(180deg, rgb(255, 255, 255) 50%, rgb(248, 248, 248) 50%);
+  height: 236px;
+  padding-bottom: 64px;
+  padding-top: 64px;
+}
+
+.ads {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 20px 100px -15px rgba(34, 60, 80, 0.1);
+  width: 1000px;
+  height: 233px;
+  padding: 0 70px;
+  margin-left: 150px;
+}
+.ads div {
+  display: flex;
+  flex-direction: column;
+}
+.ads .main-text {
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 45px;
+  width: 372px;
+  margin-bottom: 10px;
+}
+.ads .sub-text {
+  font-size: 16px;
+  line-height: 30px;
+  width: 410px;
+}
+.ads button {
+  font-size: 16px;
+  font-weight: 700;
+  transition: 500ms;
+  color: #fff;
+  background-color: #F53838;
+  border: 2px transparent solid;
+  border-radius: 10px;
+  width: 250px;
+  height: 60px;
+  box-shadow: 0px 25px 30px 0px rgba(245, 56, 56, 0.2);
+  cursor: pointer;
+}
+.ads button:hover {
+  color: #F53838;
+  background-color: transparent;
+  border: 2px #F53838 solid;
+  transition: 500ms;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 150px;
 }
 
 .logo span {
