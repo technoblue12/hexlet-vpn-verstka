@@ -31,7 +31,7 @@ $text-gray: #4F5665;
 
 body {
     width: 1440px;
-    margin: 0;
+    margin: auto;
     font-family: "Rubik", sans-serif;
     overflow-x: hidden;
 }
@@ -45,7 +45,6 @@ main {
 }
 
 footer {
-    height: 500px;
     background-color: #f8f8f8;
 }
 
@@ -706,7 +705,7 @@ footer {
 footer {
     display: flex;
     justify-content: space-between;
-    padding-left: 150px;
+    padding: 0 150px;
 
 
     & .logo-text {
@@ -771,6 +770,42 @@ footer {
     background-image: url(./icons/instagram.svg);
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.links-block {
+    display: flex;
+    justify-content: space-between;
+    width: 570px;
+
+    margin-bottom: 100px;
+
+    & .main-text {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 30px;
+
+        margin-bottom: 20px;
+    }
+}
+
+.column-link {
+    display: flex;
+    flex-direction: column;
+
+    & div {
+        display: flex;
+        flex-direction: column;
+
+        & a {
+            @include font-16;
+            @include sub-text;
+            line-height: 30px;
+
+            margin-bottom: 10px;
+
+            text-decoration: none;
+        }
+    }
 }
 
 .logo {
