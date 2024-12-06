@@ -31,7 +31,6 @@ $text-gray: #4F5665;
 
 body {
     width: 1440px;
-    height: 5190px;
     margin: 0;
     font-family: "Rubik", sans-serif;
     overflow-x: hidden;
@@ -46,7 +45,7 @@ main {
 }
 
 footer {
-    height: 564px;
+    height: 500px;
     background-color: #f8f8f8;
 }
 
@@ -619,6 +618,8 @@ footer {
     background-image: url(./icons/arrow-left.svg);
     background-repeat: no-repeat;
     background-position: center;
+
+    cursor: pointer;
 }
 
 .right {
@@ -626,6 +627,8 @@ footer {
     background-image: url(./icons/arrow-right.svg);
     background-repeat: no-repeat;
     background-position: center;
+
+    cursor: pointer;
 }
 
 .extra-space {
@@ -704,6 +707,70 @@ footer {
     display: flex;
     justify-content: space-between;
     padding-left: 150px;
+
+
+    & .logo-text {
+        cursor: default;
+    }
+
+    & span {
+        & span {
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+    }
+
+    & .socials-block {
+        display: flex;
+        flex-direction: column;
+
+        width: 340px;
+
+        & .sub-text {
+            @include font-16;
+            line-height: 30px;
+        }
+
+        & .margin-bottom {
+            margin-bottom: 30px;
+        }
+
+        & button {
+            background-color: $button-red;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0px 13px 18px 0px rgba(17, 19, 35, 0.08);
+
+            cursor: pointer;
+            
+            width: 32px;
+            height: 32px;
+        }
+
+        & .social-networks {
+            display: flex;
+            justify-content: space-between;
+            width: 136px;
+        }
+    }
+}
+
+.facebook {
+    background-image: url(./icons/facebook.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.twitter {
+    background-image: url(./icons/twitter.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.instagram {
+    background-image: url(./icons/instagram.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .logo {
