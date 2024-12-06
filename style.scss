@@ -29,6 +29,36 @@ $text-gray: #4F5665;
     font-size: 14px;
 }
 
+@mixin flex-space {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-space-center {
+    @include flex-space;
+    align-items: center;
+}
+
+@mixin flex-center-center {
+    @include flex-align-center;
+    justify-content: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-column-center {
+    @include flex-column;
+    align-items: center;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -61,11 +91,8 @@ footer {
 }
 
 .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-space-center;
     margin: 40px 150px;
-
 }
 
 .logo-text {
@@ -76,9 +103,8 @@ footer {
 }
 
 .text-buttons {
+    @include flex-space;
     width: 471px;
-    display: flex;
-    justify-content: space-between;
 
     & a {
         @include font-16;
@@ -140,14 +166,12 @@ footer {
 
 .start-info {
     display: flex;
-    flex-direction: row;
 
     margin-top: 80px;
     margin-left: 150px;
 
     & div {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         width: 555px;
 
         margin-right: 40px;
@@ -199,9 +223,7 @@ footer {
 }
 
 .info-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-space-center;
 
     width: 1140px;
     height: 200px;
@@ -214,9 +236,7 @@ footer {
     margin-left: 150px;
 
     & .circle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center-center;
     
         background-color: $button-pink;
         width: 55px;
@@ -232,24 +252,19 @@ footer {
 }
 
 .info-side {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center-center;
 
     width: 349px;
 }
 
 .info-middle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center-center;
 
     width: 428px;
 }
 
 .info-position {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
 
     line-height: 30px;
 
@@ -273,9 +288,7 @@ footer {
 }
 
 .features {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex-space-center;
 
     margin-left: 150px;
     margin-bottom: 130px;
@@ -283,13 +296,11 @@ footer {
     width: 1100px;
 
     & div {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         width: 430px;
 
         & span {
-            display: flex;
-            align-items: center;
+            @include flex-align-center;
             
         }
     }
@@ -317,9 +328,7 @@ footer {
 }
 
 .plan-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column-center;
 
     height: 950px;
 
@@ -342,17 +351,13 @@ footer {
 }
 
 .plan-block {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include flex-space;
 
     width: 1100px;
 }
 
 .plan-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column-center;
 
     transition: 500ms;
     background-color: #fff;
@@ -389,8 +394,7 @@ footer {
     }
 
     & div {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
 
         height: 230px;
 
@@ -434,9 +438,7 @@ footer {
 }
 
 .sub-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column-center;
 
     text-align: center;
 
@@ -487,9 +489,7 @@ footer {
 }
 
 .review-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column-center;
 }
 
 .reviews {
@@ -503,8 +503,7 @@ footer {
 }
 
 .review-card {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
 
     border: 2px #ddd solid;
     border-radius: 10px;
@@ -518,9 +517,7 @@ footer {
     margin-right: 50px;
 
     & .review-card-top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex-space-center;
 
         margin: 0 30px;
         margin-bottom: 10px;
@@ -529,9 +526,7 @@ footer {
             display: flex;
 
             & div {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
+                @include flex-column-center;
             }
         }
 
@@ -568,8 +563,7 @@ footer {
 }
 
 .slide-circles {
-    display: flex;
-    justify-content: space-between;
+    @include flex-space;
 
     width: 135px;
 
@@ -591,8 +585,7 @@ footer {
 }
 
 .review-buttons {
-    display: flex;
-    justify-content: space-between;
+    @include flex-space;
 
     margin-left: 150px;
     margin-right: 150px;
@@ -606,8 +599,7 @@ footer {
     }
 
     & div {
-        display: flex;
-        justify-content: space-between;
+        @include flex-space;
         
         width: 140px;
     }
@@ -641,9 +633,7 @@ footer {
 }
 
 .ads {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-space-center;
 
     border-radius: 10px;
     background-color: #fff;
@@ -656,8 +646,7 @@ footer {
     margin-left: 150px;
 
     & div {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
     }
 
     & .main-text {
@@ -704,8 +693,8 @@ footer {
 }
 
 footer {
-    display: flex;
-    justify-content: space-between;
+    @include flex-space;
+
     padding: 0 150px;
 
 
@@ -721,8 +710,7 @@ footer {
     }
 
     & .socials-block {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
 
         width: 340px;
 
@@ -748,8 +736,7 @@ footer {
         }
 
         & .social-networks {
-            display: flex;
-            justify-content: space-between;
+            @include flex-space;
             width: 136px;
         }
     }
@@ -774,8 +761,8 @@ footer {
 }
 
 .links-block {
-    display: flex;
-    justify-content: space-between;
+    @include flex-space;
+
     width: 570px;
 
     margin-bottom: 100px;
@@ -790,12 +777,10 @@ footer {
 }
 
 .column-link {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
 
     & div {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
 
         & a {
             @include font-16;
@@ -811,8 +796,7 @@ footer {
 
 .logo {
     & span {
-        display: flex;
-        align-items: center;
+        @include flex-align-center;
     }
     
     & ::before {
