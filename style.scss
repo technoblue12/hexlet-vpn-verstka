@@ -29,6 +29,10 @@ $text-gray: #4F5665;
     font-size: 14px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 1440px;
     margin: auto;
@@ -76,16 +80,13 @@ footer {
     display: flex;
     justify-content: space-between;
 
-    & button {
+    & a {
         @include font-16;
         @include sub-text;
         font-weight: 500;
 
         transition: 250ms;
-        background-color: transparent;
-        border: none;
-
-        cursor: pointer;
+        text-decoration: none;
 
         &:hover {
             transition: 250ms;
