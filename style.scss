@@ -601,6 +601,21 @@ footer {
 
         width: 60px;
         height: 60px;
+
+        background-repeat: no-repeat;
+        background-position: center;
+
+        cursor: pointer;
+
+        &[icon="left"] {
+            background-color: transparent;
+            background-image: url(./icons/arrow-left.svg);
+        }
+
+        &[icon="right"] {
+            background-color: $button-red;
+            background-image: url(./icons/arrow-right.svg);
+        }
     }
 
     & div {
@@ -608,24 +623,6 @@ footer {
         
         width: 140px;
     }
-}
-
-.left {
-    background-color: transparent;
-    background-image: url(./icons/arrow-left.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-
-    cursor: pointer;
-}
-
-.right {
-    background-color: $button-red;
-    background-image: url(./icons/arrow-right.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-
-    cursor: pointer;
 }
 
 .extra-space {
